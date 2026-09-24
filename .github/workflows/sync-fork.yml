@@ -2,7 +2,7 @@ name: Sync fork
 
 on:
   schedule:
-    - cron: "0 2 * * *"
+    - cron: "0 18 * * *"
   workflow_dispatch:
 
 permissions:
@@ -14,6 +14,6 @@ jobs:
 
     steps:
       - name: Sync fork with upstream
-        run: gh repo sync jsjhshs/16 -b main
+        run: gh repo sync jsjhshs/tvbox1 -b main
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
